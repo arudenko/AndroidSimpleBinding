@@ -18,16 +18,11 @@ public class StartActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-
         ListView lv = (ListView) findViewById(R.id.mylist);
-
-
         ArrayList<Object> values = new ArrayList<Object>();
-
         values.add(new MItem("Name1", "Value1"));
         values.add(new MItem("Name2", "Value2"));
-
-        BindingArrayAdapter adapter = new BindingArrayAdapter(this, values);
+        BindingArrayAdapter adapter = new BindingArrayAdapter(this, values, R.layout.rowlayout);
         lv.setAdapter(adapter);
     }
 }
