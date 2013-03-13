@@ -48,10 +48,10 @@ public class MItem {
 
 3. In Activity
 ```java
-  ListView lv = (ListView) findViewById(R.id.mylist);
-  ArrayList<Object> values = new ArrayList<Object>();
-  values.add(new MItem("Name1", "Value1"));
-  values.add(new MItem("Name2", "Value2"));
-  BindingArrayAdapter adapter = new BindingArrayAdapter(this, values);
-  lv.setAdapter(adapter);
+ListView lv = (ListView) findViewById(R.id.mylist);
+ArrayList<Object> values = new ArrayList<Object>();
+values.add(new MItem("Name1", "Value1"));
+values.add(new MItem("Name2", "Value2"));
+BindingArrayAdapter adapter = new BindingArrayAdapter(this, values, R.layout.rowlayout);
+lv.setAdapter(adapter);
 ```
